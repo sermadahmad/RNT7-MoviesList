@@ -3,12 +3,12 @@ import React from 'react';
 import {View} from 'react-native';
 
 
-export default Header = ({data}) => {
+export default Header = ({buttons}) => {
   return (
-    <View style = {{flexDirection:'row'}}>
-      <ColoredButton data = {data[0]}/>
-      <ColoredButton data = {data[1]}/>
-      <ColoredButton data = {data[2]}/>
+    <View style = {{padding: 10, flexDirection:'row'}}>
+      {buttons.map((button, index) => (
+        <ColoredButton key = {index} buttonData={button} />
+      ))}
     </View>
   );
 };

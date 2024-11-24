@@ -1,11 +1,11 @@
 import React from 'react';
 import { View, TouchableOpacity, Text } from 'react-native';
 
-export default ColoredButton = ({ data }) => (
+export default ColoredButton = ({ buttonData: {bgclr, clr, title} }) => (
   <View style={{ alignItems: 'center', margin: 5 }}>
     <TouchableOpacity
       style={{
-        backgroundColor: data.bgclr,
+        backgroundColor: bgclr,
         borderRadius: 5,
         elevation: 5,
         shadowColor: 'black',
@@ -15,11 +15,11 @@ export default ColoredButton = ({ data }) => (
       }}>
       <Text
         style={{
-          color: data.clr,
+          color: clr,
           fontSize: 9,
           padding: 6,
         }}>
-        {data.title}
+        {title}
       </Text>
     </TouchableOpacity>
   </View>
